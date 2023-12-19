@@ -5,18 +5,10 @@ const ctx = canvas.getContext("2d");
 canvas.width = 800;
 canvas.height = 800;
 
-// ctx.fillRect(50, 50, 100, 200);
-ctx.rect(50, 50, 100, 100);
-ctx.rect(150, 150, 100, 100);
-ctx.rect(250, 250, 100, 100);
+ctx.moveTo(50, 50); // 좌표 이동 시작점(그리기x): 그리기 시작 위치까지 좌표 이동
+ctx.lineTo(150, 50); // 좌표 이동(그리기o): 시작 위치로부터 지정 좌표(x, y축) 만큼까지 선 긋기
+ctx.lineTo(150, 150);
+ctx.lineTo(50, 150);
+ctx.lineTo(50, 50);
 // ctx.stroke();
-ctx.fill();
-
-ctx.beginPath(); // 새 경로 만들어 위의 그림과 분리하기
-ctx.rect(350, 350, 100, 100);
-ctx.rect(450, 450, 100, 100);
-ctx.fillStyle = "red";
-// setTimeout(() => {
-//   ctx.fill();
-// }, 3000);
 ctx.fill();
