@@ -5,10 +5,12 @@ const ctx = canvas.getContext("2d");
 canvas.width = 800;
 canvas.height = 800;
 
-ctx.moveTo(50, 50); // 좌표 이동 시작점(그리기x): 그리기 시작 위치까지 좌표 이동
-ctx.lineTo(150, 50); // 좌표 이동(그리기o): 시작 위치로부터 지정 좌표(x, y축) 만큼까지 선 긋기
-ctx.lineTo(150, 150);
-ctx.lineTo(50, 150);
-ctx.lineTo(50, 50);
-// ctx.stroke();
+ctx.fillRect(200, 200, 50, 200); // shortCut(지름길) function으로 fill과 rect를 호출
+ctx.fillRect(400, 200, 50, 200);
+ctx.lineWidth = 2; // context의 스타일이 먼저 와야 적용된다.
+ctx.fillRect(300, 300, 50, 100);
+ctx.fillRect(200, 200, 200, 20);
+ctx.moveTo(200, 200);
+ctx.lineTo(325, 100);
+ctx.lineTo(450, 200);
 ctx.fill();
